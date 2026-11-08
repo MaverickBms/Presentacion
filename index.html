@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1020'/%3E%3Ctext x='50' y='70' font-size='52' text-anchor='middle' fill='%236ee7e0' font-family='monospace' font-weight='bold'%3EPHP%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="Presentación interactiva sobre nueve funciones nativas de PHP: arrays, persistencia, validación y seguridad.">
+  <title>PHP nativo — Datos, persistencia y seguridad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#presentation">Saltar a la presentación</a>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="PHP nativo, inicio">
+      <span class="brand-mark"><i class="ph ph-brackets-curly"></i></span>
+      <span>PHP<span class="brand-muted"> / NATIVO</span></span>
+    </a>
+    <div class="topbar-center"><span class="live-dot"></span> GUÍA INTERACTIVA <span class="topbar-divider">/</span> PHP 8.x</div>
+    <div class="top-actions">
+      <button class="icon-btn" id="tocToggle" aria-label="Abrir índice" aria-expanded="false" title="Índice (I)"><i class="ph ph-list"></i></button>
+      <button class="icon-btn" id="fullscreenBtn" aria-label="Activar pantalla completa" title="Pantalla completa"><i class="ph ph-corners-out"></i></button>
+    </div>
+  </header>
+
+  <aside class="toc-panel" id="tocPanel" aria-label="Índice de diapositivas" hidden>
+    <div class="toc-head">
+      <div><span class="eyebrow">NAVEGACIÓN</span><h2>Contenido</h2></div>
+      <button class="icon-btn" id="tocClose" aria-label="Cerrar índice"><i class="ph ph-x"></i></button>
+    </div>
+    <nav id="tocList"></nav>
+  </aside>
+
+  <main id="presentation" tabindex="-1">
+    <div class="presentation-meta">
+      <span id="sectionLabel">INICIO</span>
+      <span class="meta-line"></span>
+      <span id="slideCounter">01 <b>/</b> 23</span>
+    </div>
+    <div class="slide-stage" id="slideStage" aria-live="polite" aria-atomic="true"></div>
+    <div class="bottom-controls">
+      <div class="progress-track" role="progressbar" aria-label="Progreso de la presentación" aria-valuemin="1" aria-valuemax="23" aria-valuenow="1" id="progressTrack"><span id="progressFill"></span></div>
+      <div class="control-row">
+        <div class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd><span>para navegar</span></div>
+        <div class="nav-buttons">
+          <button class="nav-btn" id="prevBtn" disabled><i class="ph ph-arrow-left"></i><span>Anterior</span></button>
+          <button class="nav-btn nav-next" id="nextBtn"><span>Siguiente</span><i class="ph ph-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">Esta presentación necesita JavaScript para mostrar y navegar las diapositivas.</div></noscript>
+
+  <script defer src="js/slides-data.js"></script>
+  <script defer src="js/app.js"></script>
+</body>
+</html>
