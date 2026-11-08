@@ -237,3 +237,5 @@
     }
 .video-frame{width:min(100%,760px);margin:30px auto 0;background:#05070d;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 28px 80px #0008}
 video{width:100%;max-height:54vh;display:block;background:#05070d}
+.bg-video{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:#0b1020}
+body::after{content:"";position:fixed;inset:0;z-index:0;background:rgba(11,16,32,.55);pointer-events:none}
